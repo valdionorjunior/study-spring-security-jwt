@@ -1,0 +1,24 @@
+spring:
+  dataSource:
+    url: jdbc:h2:mem:study-spring-security-jwt_db
+    username: junior
+    password:
+  jpa:
+    #hibernate:
+    #ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+security:
+  config:
+    prefix: Bearer
+    key: SECRET_KEY
+    expiration: 3600000
